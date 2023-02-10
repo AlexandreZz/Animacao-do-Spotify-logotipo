@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(20, 20, 20);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  perspective: 1450px;
+}
+
+#Lines1,
+#Lines2,
+#Lines3 {
+  opacity: 0;
+  fill-opacity: 0;
+}
+
+#TextSpotify {
+  opacity: 0;
+  animation: FlipText 6s ease 10s forwards;
+}
+
+@keyframes FlipText {
+  from {
+    opacity: 0;
+    transform: rotateX(180deg);
+    transform-origin: 0% 100%;
+    transform-style: preserve-3d;
+    filter: drop-shadow(0px 5px 17px rgba(0, 216, 86, 0.893)) drop-shadow(0px 2px 41px rgb(1, 27, 11));
+  }
+
+
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: 0% 100%;
+    transform-style: preserve-3d;
+    filter: drop-shadow(0px 5px 17px rgba(0, 216, 86, 0.893)) drop-shadow(0px 2px 41px rgb(1, 27, 11));
+  }
+}
+
+#BodySpotify {
+  rx: 150%;
+  ry: 150%;
+  animation: bodySmall 6s ease 5s forwards;
+}
+
+#Pointer1 {
+  animation: animacaoDePonteiro 3s ease 0s forwards, AnimacaoDeMusicPointeiro1 8s ease 3s forwards, AddLinesSpotify1 2s ease 11s forwards;
+}
+
+#Pointer2 {
+  animation: animacaoDePonteiro 3s ease 0s forwards, AnimacaoDeMusicPointeiro2 8s ease 3s forwards, AddLinesSpotify2 2s ease 11s forwards;
+}
+
+#Pointer3 {
+  animation: animacaoDePonteiro 3s ease 0s forwards, AnimacaoDeMusicPointeiro3 8s ease 3s forwards, AddLinesSpotify3 2s ease 11s forwards;
+}
+
+
+@keyframes bodySmall {
+  from {
+    rx: 150%;
+    ry: 150%;
+  }
+
+  to {
+    rx: 472.5px;
+    ry: 474px;
+  }
+}
+
+@keyframes animacaoDePonteiro {
+
+  0% {
+    opacity: 0;
+    stroke-width: 0;
+    transform: translateY(-10%);
+  }
+
+
+  50% {
+    opacity: 1;
+    stroke-width: 86;
+    transform: translateY(-10%);
+  }
+
+
+  70% {
+    opacity: 1;
+    stroke-width: 86;
+    transform: translateY(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    stroke-width: 86;
+    transform: translateY(5%);
+  }
+}
+
+@keyframes AnimacaoDeMusicPointeiro1 {
+  0% {
+    // Ponteiro
+    d: path('M534.016 804C533.992 803.618 533.997 803.394 534.016 803');
+  }
+
+  15% {
+    d: path('M535 708C533.643 488.53 533.691 410.478 535 191');
+  }
+
+  30% {
+    d: path("M534 533C534.712 476 534 447 534 383");
+  }
+
+  45% {
+    d: path('M535 708C533.643 488.53 533.691 410.478 535 191');
+  }
+
+  65% {
+    d: path("M534 533C534.712 476 534 447 534 383");
+  }
+
+  85% {
+    d: path('M535 708C533.643 488.53 533.691 410.478 535 191');
+  }
+
+  100% {
+    d: path("M534 533C534.712 476 534 447 534 383");
+  }
+}
+
+@keyframes AnimacaoDeMusicPointeiro2 {
+  0% {
+    d: path('M714.016 805C713.992 804.618 713.997 804.394 714.016 804');
+  }
+
+  15% {
+    d: path('M712.317 383C712.317 444.626 712.317 477.666 712.317 533');
+  }
+
+  30% {
+    d: path("M713.5 191C710.671 398.464 710.964 512.901 713.5 715");
+  }
+
+  45% {
+    d: path('M712.317 383C712.317 444.626 712.317 477.666 712.317 533');
+  }
+
+  65% {
+    d: path("M713.5 191C710.671 398.464 710.964 512.901 713.5 715");
+  }
+
+  85% {
+    d: path('M712.317 383C712.317 444.626 712.317 477.666 712.317 533');
+  }
+
+  100% {
+    d: path("M713.5 191C710.671 398.464 710.964 512.901 713.5 715");
+  }
+}
+
+@keyframes AnimacaoDeMusicPointeiro3 {
+  0% {
+    d: path('M894.016 804C893.992 803.618 893.997 803.394 894.016 803');
+  }
+
+  15% {
+    d: path('M893.5 190C892.159 395.307 892.177 510.023 893.5 714');
+  }
+
+  30% {
+    d: path("M891.317 383C890.057 444.626 889.912 477.666 891.317 533");
+  }
+
+  45% {
+    d: path('M893.5 190C892.159 395.307 892.177 510.023 893.5 714');
+  }
+
+  65% {
+    d: path("M891.317 383C890.057 444.626 889.912 477.666 891.317 533");
+  }
+
+  85% {
+    d: path('M893.5 190C892.159 395.307 892.177 510.023 893.5 714');
+  }
+
+  100% {
+    d: path("M891.317 383C890.057 444.626 889.912 477.666 891.317 533");
+  }
+}
+
+@keyframes AddLinesSpotify1 {
+  to {
+    d: path('M447 323.436C584 277.436 861 280.436 1034 383.436');
+  }
+}
+
+@keyframes AddLinesSpotify2 {
+  to {
+    d: path('M472 477C635 429 828 450 973 537');
+  }
+}
+
+@keyframes AddLinesSpotify3 {
+  to {
+    d: path('M484 620.983C643 579.983 789 590 923 669');
+  }
+}
